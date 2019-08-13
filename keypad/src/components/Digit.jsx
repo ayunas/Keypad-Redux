@@ -1,9 +1,12 @@
 import React from 'react';
+import {digitreducer} from '../reducers/digitreducer';
+import {KeypadContext} from '../contexts/KeypadContext';
 
 function Digit(props) {
+    const context = React.useContext(KeypadContext);
 
     return (
-        <button>{props.digit}</button>
+        <button onClick={() => context.dispatch({ type:"DIGIT", digit: props.digit })}>{props.digit}</button>
     )
 }
 
