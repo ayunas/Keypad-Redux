@@ -9,6 +9,14 @@
   margin: 10px;
 }
 
+#keypad {
+  margin: 0 auto;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .digit {
   display: flex;
   align-items: center;
@@ -21,12 +29,13 @@
 
 button {
   padding: 25px;
+  width: 25%;
   margin: 10px;
+  font-size: 25px;
 }
 
 #reset {
   padding: 10px;
-  
 }
 
 
