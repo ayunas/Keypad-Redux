@@ -2,13 +2,16 @@ import React from 'react';
 import { KeypadContext } from '../contexts/KeypadContext';
 
 function Display() {
-    const keypadContext = React.useContext(KeypadContext);
-    // console.log('%ckeypadContext in Display', 'color:green;', keypadContext);
+    const { digit } = React.useContext(KeypadContext).displayDigit;
 
     return (
         <div id="display">
-            {/* {keypadContext.displayDigit.map( digit => <div className="digit">{digit}</div>)} */}
-            <div className="digit">{keypadContext.displayDigit.digit}</div>
+            <div className="digit">{digit[0] && digit[0]}</div>
+            <div className="digit">{digit[1] && digit[1]}</div>
+            <div className="digit">{digit[2] && digit[2]}</div>
+            <div className="digit">{digit[3] && digit[3]}</div>
+            <div className="digit">{digit[4] && digit[4]}</div>
+            <div className="digit">{digit[5] && digit[5]}</div>
         </div>
     )
 }

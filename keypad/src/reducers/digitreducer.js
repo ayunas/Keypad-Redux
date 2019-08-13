@@ -7,12 +7,11 @@ export function digitreducer(state,action) {
 
     switch(action.type) {
         case "DIGIT":
-            return {
-                ...state,
-                digit: [...state.digit, action.digit]
-            }
+            return state.digit.length <= 6 ? 
+            {...state, digit: [...state.digit, action.digit] } 
+            : state;
+           
         default: 
             return state;
     }
 }
-
